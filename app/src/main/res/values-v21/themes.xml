@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primary_light</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/primary_light</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <item name="android:statusBarColor">@color/primary_light</item>
+
+    </style>
+</resources>

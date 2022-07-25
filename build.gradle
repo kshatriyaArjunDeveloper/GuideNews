@@ -1,0 +1,75 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+
+    ext {
+        gradle_version = '7.0.4'
+        kotlin_version = '1.6.10'
+        nav_plugin_version = '2.3.5'
+        hilt_plugin_version = '2.38.1'
+        secrets_plugin_version = '2.0.0'
+    }
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "com.android.tools.build:gradle:$gradle_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // Nav Safe Args
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_plugin_version"
+        // Hilt
+        classpath("com.google.dagger:hilt-android-gradle-plugin:$hilt_plugin_version")
+        // For local.properties
+        classpath "com.google.android.libraries.mapsplatform.secrets-gradle-plugin:secrets-gradle-plugin:$secrets_plugin_version"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+//allprojects {
+//    repositories {
+//        google()
+//        mavenCentral()
+//        maven {
+//            url "https://jitpack.io"
+//        }
+//        maven {
+//            url "https://maven.google.com"
+//        }
+//    }
+//}
+
+ext {
+
+    // SDK versions
+    compileSdkVersion = 32
+    minSdkVersion = 16
+    targetSdkVersion = 32
+
+    // App version
+    versionCode = 1
+    versionName = "1.0"
+
+    // Views Related
+    shimmer_version = '0.5.0'
+
+    // Glide
+    glide_version = '4.12.0'
+
+    // Android Jetpack
+    nav_version = '2.3.5'
+    lifecycle_version = '2.4.0'
+    paging_version = '3.1.0'
+
+    // Retrofit
+    retrofit_version = "2.9.0"
+    okhttp_version = "4.9.0"
+    logging_interceptor_version = "4.9.0"
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
